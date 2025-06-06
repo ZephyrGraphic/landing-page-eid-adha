@@ -10,7 +10,7 @@ export default function IdulAdhaLanding() {
   const audioRef = useRef<HTMLAudioElement>(null)
 
   // Array of background images for slideshow
-  const backgroundImages = ["/images/SI24F.jpg", "/images/SI24F-2.jpg", "/images/SI24F-3.jpg", "/images/SI24F-4.jpg"]
+  const backgroundImages = ["/images/EID-1.jpg", "/images/EID-2.jpg", "/images/EID-3.jpg"]
 
   useEffect(() => {
     // Loading screen duration
@@ -22,11 +22,11 @@ export default function IdulAdhaLanding() {
   }, [])
 
   useEffect(() => {
-    // Slideshow timer - change image every 2 seconds
+    // Slideshow timer - change image every 3 seconds
     if (!isLoading) {
       const slideshowTimer = setInterval(() => {
         setCurrentImageIndex((prevIndex) => (prevIndex + 1) % backgroundImages.length)
-      }, 2000) // 2 seconds per image
+      }, 3000) // 3 seconds per image
 
       return () => clearInterval(slideshowTimer)
     }
